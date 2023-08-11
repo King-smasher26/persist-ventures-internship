@@ -13,14 +13,6 @@ body {
 
 }
 
-.app i {
-  font-size: 80px;
-  
-  animation-duration: 3s;
-  animation-name: slidein;
-  animation-iteration-count: 1;
-}
-
 article {
   position: relative;
   width: 140px;
@@ -104,3 +96,25 @@ input[type=checkbox]:checked ~ div {
     width: 100%;
   }
 }
+
+
+
+.expand-checkbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+.walking-options{
+  border:2px solid white;
+  width: 60vw;
+  display: flex;
+  justify-content: center ;
+  display: none;
+  
+}
+/* .walking-options{
+
+  display:flex;
+} */

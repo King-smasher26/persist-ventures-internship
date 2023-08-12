@@ -4,7 +4,7 @@ import Customcheckbox from './Components.js/Customcheckbox';
 function App() {
   return (
     <div className="App">
-      <h1>yo</h1>
+      <h1>Neighborgood Interest Form</h1>
       <Customcheckbox/>
     </div>
   );

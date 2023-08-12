@@ -348,11 +348,11 @@ export default function Customcheckbox() {
        </div>
 
 
-      </section>
-      <div className='btn-space'>
+      {/* <div className='btn-space'>
 
 <button className='next-page-button'>-Next-</button>
-      </div>
+      </div> */}
+      </section>
     </div>
   )
 }

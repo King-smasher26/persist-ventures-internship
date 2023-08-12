@@ -110,7 +110,7 @@ input[type=checkbox]:checked ~ div {
   align-items: center;
   /* display: none; */
 }
-.walking-options,.running-options,.movies-options,.shopping-options{
+.walking-options,.running-options,.movies-options,.shopping-options,.Errands-options,.Childcare-options,.Eldercare-options,.Petcare-options{
   /* border:2px solid white; */
   width: 60vw;
   display: flex;
@@ -119,7 +119,7 @@ input[type=checkbox]:checked ~ div {
   display: none;
   margin-bottom: 20px;
 }
-.walking-options-inside,.running-options-inside,.movies-options-inside,.shopping-options-inside{
+.walking-options-inside,.running-options-inside,.movies-options-inside,.shopping-options-inside,.Errands-options-inside,.Childcare-options-inside,.Eldercare-options-inside,.Petcare-options-inside{
   display: flex;
   justify-content: center;
 }
@@ -148,11 +148,13 @@ input[type=checkbox]:checked ~ div {
   margin-top: 20px;
 }
 .btn-space{
-  /* border: 2px solid white; */
+  border: 2px solid white;
   /* display: flex; */
-  float: right;
-  margin-right: 20vw;
+  /* float: right; */
+  
+  margin-left: 60vw;
   margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 .next-page-button{
   font-size: 25px;
@@ -167,4 +169,8 @@ input[type=checkbox]:checked ~ div {
   border: 2px solid rgb(25, 18, 168);
   background-color: black;
   color: white;
+}
+.Customcheckbox{
+  border: 2px solid white;
+
 }

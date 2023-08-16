@@ -9,7 +9,7 @@ function App() {
     return (
       <div className="App">
 
-      <h1>Neighborgood Interest Form</h1>
+      <h1 className='heading'>Neighborgood Interest Form</h1>
 
       <Customcheckbox/>
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../App.css"
 export default function Customcheckbox() {
 
@@ -184,6 +184,9 @@ export default function Customcheckbox() {
     name: "shopping-books",
     value:false
   };
+  let [namevalue,setNamevalue]=useState();
+  let [emailvalue,setEmailvalue]=useState();
+  let [subsvalue,setSubsvalue]=useState();
   
     function clicked(e){
     const newentry={
@@ -350,9 +353,26 @@ export default function Customcheckbox() {
 
        
     }
+    function gettypedcontent(e){
+      // console.log(e.target.value);
+      setNamevalue(e.target.value);
+
+    }
+    function gettypedemailcontent(e){
+      // console.log(e.target.value);
+    setEmailvalue(e.target.value);
+
+    }
+    function gettypedsubs(e){
+      // setSubsvalue(e.target.value);
+      console.log(subsvalue)
+    }
     function submitted(e){
       e.preventDefault();
       console.log("yo");
+      console.log("name-->",namevalue);
+      console.log("email-->",emailvalue);
+      console.log("subjects-->",subsvalue);
       const contributionarray=[walkingval,walking_slow,walking_Moderate,walking_fast,runningval,running_slow,running_Moderate,running_fast,bicyclingval,dogwalkingval,Gardeningval,swimmingval,drawingval,Cookoutsval,blockpartiesval,dinnerpartiesval,computergamesval,readinggroupsval,restaurantsval,moviesval,movies_action,movies_romance,movies_comedy,movies_sciencefiction,movies_indie,shoppingval,shopping_groceries,shopping_clothing,shopping_books,errval,Errands_emergenciesval,Errands_occasionalval,Errands_freequentlyval,childcareval,Childcare_emergenciesval,Childcare_occasionalval,Childcare_freequentlyval,eldercareval,Eldercare_emergenciesval,Eldercare_occasionalval,Eldercare_freequentlyval,petcareval,Petcare_emergenciesval,Petcare_occasionalval,Petcare_freequentlyval];
       // console.log(contributionarray);
       const printingarray = contributionarray.map((obj)=>{
@@ -362,9 +382,11 @@ export default function Customcheckbox() {
     }
   return (
     <div>
-      <form onSubmit={submitted}>
+      <form autocomplete='off' onSubmit={submitted}>
 
       <section className="app">
+        <input type='text' className='typeinput' placeholder='name' name='name' onChange={gettypedcontent} required/>
+        <input type='text' className='typeinput' placeholder='email' name='email' onChange={gettypedemailcontent} required/>
         <div className='first-section'>
 
         <div className='expand-checkbox'>
@@ -699,7 +721,7 @@ export default function Customcheckbox() {
 <button className='next-page-button'>-Next-</button>
       </div> */}
       </section>
-      <section>
+      <section className='app2'>
           {/* <div>{arrmap}</div> */}
         <div className="custom-checkbox-section1">
             <div className="expand-checkbox">
@@ -882,9 +904,12 @@ export default function Customcheckbox() {
         
             </div>
         </div>
+        <div className='tutoring-text '>Tutoring( enter subjects if yes )</div>
+        <input type='text' id='tutoring' className='typeinput' placeholder='subjects' name='name' onChange={gettypedsubs} required/>
+
         </section>
 
-        <input type='submit'/>
+        <input id='submit-btn' type='submit'/>
       </form>
     </div>
   )

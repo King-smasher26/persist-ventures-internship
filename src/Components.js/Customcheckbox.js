@@ -364,8 +364,8 @@ export default function Customcheckbox() {
 
     }
     function gettypedsubs(e){
-      // setSubsvalue(e.target.value);
-      console.log(subsvalue)
+      setSubsvalue(e.target.value);
+      // console.log(subsvalue)
     }
     function submitted(e){
       e.preventDefault();
@@ -382,7 +382,7 @@ export default function Customcheckbox() {
     }
   return (
     <div>
-      <form autocomplete='off' onSubmit={submitted}>
+      <form autoComplete='off' onSubmit={submitted}>
 
       <section className="app">
         <input type='text' className='typeinput' placeholder='name' name='name' onChange={gettypedcontent} required/>
